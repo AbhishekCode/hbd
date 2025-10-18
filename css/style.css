@@ -1,0 +1,262 @@
+:root {
+  --color-yellow: #ffd93d;
+  --color-sky: #a8e6cf;
+  --color-pink: #ffb4b4;
+  --color-purple: #e8b4f0;
+  --color-white: #ffffff;
+  --color-text: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  color: var(--color-text);
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fffef7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+h1, h2, h3 {
+  margin: 0 0 12px;
+  font-family: "Quicksand", cursive;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.small {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary {
+  background: var(--color-yellow);
+  color: #7a5600;
+}
+
+.btn-secondary {
+  background: var(--color-pink);
+  color: #7a0030;
+}
+
+.link {
+  color: #0077cc;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, #fff7cd 0%, #fffef7 60%);
+  overflow: hidden;
+}
+
+.hero .container {
+  padding: 96px 0 64px;
+}
+
+.hero-title {
+  font-size: clamp(28px, 6vw, 56px);
+  line-height: 1.1;
+}
+
+.hero-subtitle, .event-date, .event-time, .event-location {
+  margin: 8px 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.hero-sun {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 180px;
+  height: 180px;
+  animation: bounce 4s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+.balloons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  width: 60px;
+  opacity: 0.8;
+}
+
+.balloon.b1 { left: 12%; animation: float 6s ease-in-out infinite; }
+.balloon.b2 { left: 48%; animation: float 7s ease-in-out infinite; }
+.balloon.b3 { left: 78%; animation: float 5.5s ease-in-out infinite; }
+
+/* Sections */
+.section-invite {
+  background: #fffef7;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 769px) {
+  .grid-2 { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+}
+
+.invite-photo img {
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.section-details {
+  background: linear-gradient(180deg, #fffef7 0, #ffffff 100%);
+}
+
+.details-cards {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 769px) {
+  .details-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.card {
+  background: var(--color-white);
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.section-schedule {
+  background: #ffffff;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.timeline li {
+  background: #fff;
+  border-left: 6px solid var(--color-sky);
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.timeline li span {
+  display: inline-block;
+  font-weight: 700;
+  min-width: 80px;
+}
+
+.section-rsvp {
+  background: linear-gradient(180deg, #ffffff 0, #fff7fd 100%);
+}
+
+.form-embed iframe {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 769px) {
+  .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.footer {
+  background: #fffef7;
+  padding: 24px 0 48px;
+  text-align: center;
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 700ms ease forwards;
+}
+
+/* Confetti */
+#confetti-root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  opacity: 0.9;
+  transform: translate3d(0, -100px, 0);
+  animation: confetti-fall linear forwards;
+}
+
+@keyframes confetti-fall {
+  0% { transform: translate3d(var(--x, 0px), -10vh, 0) rotate(0deg); }
+  100% { transform: translate3d(var(--x, 0px), 110vh, 0) rotate(720deg); }
+}
+
+
