@@ -101,6 +101,11 @@ p {
   display: flex;
   gap: 12px;
   margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-actions .btn {
+  white-space: nowrap;
 }
 
 .hero-sun {
@@ -144,6 +149,7 @@ p {
 
 @media (min-width: 769px) {
   .grid-2 { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+  .section-invite .grid-2 > .reveal { align-self: start; }
 }
 
 .invite-photo img {
@@ -258,5 +264,3 @@ p {
   0% { transform: translate3d(var(--x, 0px), -10vh, 0) rotate(0deg); }
   100% { transform: translate3d(var(--x, 0px), 110vh, 0) rotate(720deg); }
 }
-
-
