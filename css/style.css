@@ -78,6 +78,59 @@ p {
 }
 
 /* Hero */
+.card-hero {
+  background: linear-gradient(180deg, #ffe6f1 0, #fffef7 80%);
+  padding: 20px 0 28px;
+}
+
+.invitation-card {
+  position: relative;
+  margin: 0 auto;
+  background: #ffffff;
+  width: min(820px, 100%);
+  border-radius: 24px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.12);
+  padding: clamp(16px, 4vw, 28px);
+  overflow: hidden;
+}
+
+.balloon-arch { position: relative; height: 160px; z-index: 1; }
+.arch-balloon { position: absolute; width: 72px; opacity: .9; filter: drop-shadow(0 4px 8px rgba(0,0,0,.08)); z-index: 2; }
+/* Arrange balloons along a circular arc with stronger visibility at corners */
+.arch-balloon.a1 { left: 0%;  top: 56px; transform: rotate(-14deg); opacity: 1; }
+.arch-balloon.a2 { left: 12%; top: 28px; transform: rotate(-8deg);  opacity: .95; }
+.arch-balloon.a3 { left: 26%; top: 6px;  transform: rotate(-2deg);  opacity: .85; }
+.arch-balloon.a4 { left: 40%; top: -6px; transform: rotate(2deg);   opacity: .7; }
+.arch-balloon.a5 { left: 54%; top: -6px; transform: rotate(-2deg);  opacity: .7; }
+.arch-balloon.a6 { left: 68%; top: 6px;  transform: rotate(2deg);   opacity: .85; }
+.arch-balloon.a7 { left: 82%; top: 28px; transform: rotate(8deg);   opacity: .95; }
+.arch-balloon.a8 { left: 94%; top: 56px; transform: rotate(14deg);  opacity: 1; }
+
+.dangling-heart { position: absolute; top: 60px; font-size: 20px; color: #ff4f88; animation: float 4s ease-in-out infinite; }
+.dangling-heart.d1 { left: 22%; }
+.dangling-heart.d2 { left: 50%; animation-delay: .7s; }
+.dangling-heart.d3 { left: 78%; animation-delay: 1.2s; }
+
+.photo-wrap { position: relative; margin-top: -50px; display: grid; place-items: center; z-index: 2; }
+.photo-ring { width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle at 50% 50%, #ffe0ef, #ffb4d0); padding: 10px; display: grid; place-items: center; box-shadow: 0 10px 24px rgba(255,79,136,.25); }
+.photo { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; background: #fde7f2; }
+.arc-title { position: absolute; width: 320px; height: 160px; top: -10px; }
+
+.card-copy { text-align: center; padding: 10px 12px 0; }
+.script-name { font-family: "Great Vibes", cursive; font-size: clamp(36px, 7vw, 64px); color: #d11972; margin: 6px 0 0; }
+.birthday-line { font-size: clamp(20px, 4.5vw, 36px); letter-spacing: 2px; color: #ffb400; margin: 4px 0 10px; font-weight: 700; }
+.invite-text { max-width: 640px; margin: 0 auto; color: #555; }
+.with-love { margin-top: 14px; color: #d19; font-weight: 700; }
+.signature { font-family: "Great Vibes", cursive; font-size: clamp(28px, 5.5vw, 44px); color: #c01264; margin: 2px 0 0; }
+
+.date-time { margin: 18px auto 0; text-align: center; }
+.date-time .month { font-weight: 700; letter-spacing: 3px; color: #444; }
+.date-time .row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; margin: 8px 0; }
+.date-time .pill { background: #111; color: #fff; padding: 8px 12px; border-radius: 999px; font-weight: 700; letter-spacing: 2px; }
+.date-time .day { font-size: clamp(28px, 6vw, 42px); font-weight: 800; color: #d11972; }
+.date-time .year { letter-spacing: 6px; font-weight: 700; color: #444; }
+
+.address { text-align: center; margin: 16px auto 8px; color: #9a2a5e; }
 .hero {
   position: relative;
   background: linear-gradient(180deg, #fff7cd 0%, #fffef7 60%);
@@ -106,6 +159,11 @@ p {
 
 .hero-actions .btn {
   white-space: nowrap;
+}
+
+/* Center CTA buttons in the CTA section */
+.section-cta .hero-actions {
+  justify-content: center;
 }
 
 .hero-sun {
@@ -264,3 +322,32 @@ p {
   0% { transform: translate3d(var(--x, 0px), -10vh, 0) rotate(0deg); }
   100% { transform: translate3d(var(--x, 0px), 110vh, 0) rotate(720deg); }
 }
+
+/* Mobile tweaks: fewer, smaller arch balloons with balanced spacing */
+@media (max-width: 560px) {
+  .balloon-arch { height: 120px; }
+  .arch-balloon { width: 54px; }
+
+  /* Hide some balloons to reduce crowding */
+  .arch-balloon.a2,
+  .arch-balloon.a4,
+  .arch-balloon.a5,
+  .arch-balloon.a7 { display: none; }
+
+  /* Reposition remaining balloons for even spacing */
+  .arch-balloon.a1 { left: 2%;  top: 52px; transform: rotate(-12deg); opacity: 1; }
+  .arch-balloon.a3 { left: 30%; top: 6px;  transform: rotate(-2deg);  opacity: .9; }
+  .arch-balloon.a6 { left: 65%; top: 6px;  transform: rotate(2deg);   opacity: .9; }
+  .arch-balloon.a8 { left: 90%; right: 0; top: 52px; transform: rotate(12deg);  opacity: 1; }
+
+  /* Adjust hearts to align under spaced balloons */
+  .dangling-heart { top: 64px; font-size: 18px; }
+  .dangling-heart.d1 { left: 18%; }
+  .dangling-heart.d2 { left: 50%; }
+  .dangling-heart.d3 { left: 82%; }
+
+  .photo-wrap { position: relative; margin-top: -30px; display: grid; place-items: center; z-index: 2; }
+  
+}
+
+

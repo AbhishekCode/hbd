@@ -15,7 +15,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -23,64 +23,76 @@
   </head>
   <body>
     <div id="confetti-root" aria-hidden="true"></div>
-
-    <header class="hero">
-      <img class="hero-sun" src="images/sun.svg" alt="Sun" />
+    
+    <!-- Write your birthday card html code here -->
+    <section class="card-hero" aria-label="Birthday invitation card">
       <div class="container">
-        <div class="hero-content reveal fade-in-up">
-          <h1 class="hero-title">🎈 Pranshi is Turning One! 🌞</h1>
-          <!-- EASY UPDATE: Change subtitle below -->
-          <p class="hero-subtitle">Come celebrate our little sunshine's first birthday</p>
-
-          <!-- EASY UPDATE: Change date/time/location below -->
-          <p class="event-date">Wednesday, November 5th, 2025</p>
-          <p class="event-time">7:00 PM</p>
-          <p class="event-location">
-            Enrise by Sayaji · <a href="https://maps.app.goo.gl/KGvjq729NQGSyuLC7" target="_blank" class="link">View on Map</a>
-          </p>
-
-          <div class="hero-actions">
-            <a href="#rsvp" class="btn btn-primary">RSVP Now</a>
-            <a href="#details" class="btn btn-secondary">View Details</a>
-            <a
-              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pranshi%27s%201st%20Birthday&dates=20251105T133000Z/20251105T153000Z&ctz=Asia/Kolkata&details=Join%20us%20for%20Pranshi%27s%201st%20birthday%20%E2%80%94%20Sunshine%20%26%20Balloons.&location=Enrise%20by%20Sayaji%20%E2%80%94%20Survey%20Number%2081%2C%20Vinode%20Nagar%2C%201%2F1%2C%20Marunji%20Rd%2C%20Bhumkar%20Nagar%2C%20Wakad%2C%20Pune%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411057"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-secondary"
-            >Add to Google Calendar</a>
+        <div class="invitation-card">
+          <div class="balloon-arch" aria-hidden="true">
+            <img src="images/balloon.svg" alt="" class="arch-balloon a1" />
+            <img src="images/balloon.svg" alt="" class="arch-balloon a2" />
+            <img src="images/balloon.svg" alt="" class="arch-balloon a3" />
+            <img src="images/balloon.svg" alt="" class="arch-balloon a4" />
+            <img src="images/balloon.svg" alt="" class="arch-balloon a5" />
+            <img src="images/balloon.svg" alt="" class="arch-balloon a6" />
+            <img src="images/balloon.svg" alt="" class="arch-balloon a7" />
+            <img src="images/balloon.svg" alt="" class="arch-balloon a8" />
+            <span class="dangling-heart d1" aria-hidden="true">❤</span>
+            <span class="dangling-heart d2" aria-hidden="true">❤</span>
+            <span class="dangling-heart d3" aria-hidden="true">❤</span>
           </div>
-        </div>
 
-        <!-- Decorative Balloons -->
-        <div class="balloons" aria-hidden="true">
-          <img src="images/balloon.svg" class="balloon b1" alt="" />
-          <img src="images/balloon.svg" class="balloon b2" alt="" />
-          <img src="images/balloon.svg" class="balloon b3" alt="" />
+          <div class="photo-wrap">
+            <div class="photo-ring">
+              <img src="images/pranshi.png" alt="Birthday girl" class="photo" />
+            </div>
+            <svg class="arc-title" viewBox="0 0 300 150" aria-hidden="true">
+              <defs>
+                <path id="arcPath" d="M30,120 A120,120 0 0,1 270,120" />
+              </defs>
+            </svg>
+          </div>
+
+          <div class="card-copy">
+            <h2 class="script-name">Pranshi's</h2>
+            <p class="birthday-line">1st Birthday</p>
+            <p class="invite-text">
+              With love in our hearts, we invite you to celebrate the symbol of our love—our little
+              princess’s first birthday. Your presence will make this day even more magical!
+            </p>
+            <p class="with-love">With Love</p>
+            <p class="signature">Abhishek & Divyanshi</p>
+          </div>
+
+          <div class="date-time">
+            <div class="month">Wednesday, November 5th, 2025, 7:00 PM</div>
+          </div>
+
+          <div class="address">
+            <p><strong>Enrise by Sayaji</strong></p>
+            <p>Marunji Rd, Bhumkar Nagar, Wakad</p>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
+
+     <!-- End-->
+
+
 
     <main>
-      <!-- Invitation Message -->
-      <section id="invite" class="section section-invite">
-        <div class="container grid-2">
-          <div class="reveal fade-in-up">
-            <h2>You're Invited!</h2>
-            <!-- EASY UPDATE: Invitation text -->
-            <p>
-              With giggles and sunshine, our sweet <strong>Pranshi</strong> turns one! Join us for
-              a joyful celebration filled with love, laughter, and colorful balloons.
-            </p>
-            <p>
-              We can't wait to share this special milestone with our closest friends and family.
-            </p>
-          </div>
-          <div class="invite-photo reveal fade-in-up">
-            <!-- Optional: Replace with your own image file named images/birthday-girl.jpg -->
-            <img src="images/pranshi.png" alt="Birthday Girl" loading="lazy" onerror="this.style.display='none'" />
-          </div>
-        </div>
-      </section>
+      <section  id="cta" class="section-cta">
+      <div class="hero-actions">
+        <a href="#rsvp" class="btn btn-primary">RSVP Now</a>
+        <a href="#details" class="btn btn-secondary">View Details</a>
+        <a
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pranshi%27s%201st%20Birthday&dates=20251105T190000/20251105T210000&ctz=Asia/Kolkata&details=Join%20us%20for%20Pranshi%27s%201st%20birthday%20%E2%80%94%20Sunshine%20%26%20Balloons.&location=Enrise%20by%20Sayaji%20%E2%80%94%20Survey%20Number%2081%2C%20Vinode%20Nagar%2C%201%2F1%2C%20Marunji%20Rd%2C%20Bhumkar%20Nagar%2C%20Wakad%2C%20Pune%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411057"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-secondary"
+        >Add to Google Calendar</a>
+      </div>
+    </section>
 
       <!-- Event Details -->
       <section id="details" class="section section-details">
@@ -140,7 +152,7 @@
               </div>
               <div class="card reveal fade-in-up">
                 <h3>Parking</h3>
-                <p>Parking available at the venue</p>
+                <p>Street parking available at the venue</p>
               </div>
               <div class="card reveal fade-in-up">
                 <h3>Questions?</h3>
@@ -163,3 +175,5 @@
     <script src="js/form.js"></script>
   </body>
   </html>
+
+

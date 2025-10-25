@@ -1,0 +1,13 @@
+{
+  "name": "hbdpranshi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static birthday invitation site",
+  "scripts": {
+    "start": "python -m SimpleHTTPServer 8081",
+    "vercel:link": "npx --yes vercel link --confirm --scope $VERCEL_SCOPE",
+    "vercel:deploy": "npx --yes vercel --prod --confirm --scope $VERCEL_SCOPE",
+    "deploy": "yarn vercel:deploy"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

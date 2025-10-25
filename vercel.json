@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "hbdpranshi",
+  "public": true,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
+
