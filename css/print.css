@@ -1,0 +1,166 @@
+/* Print-specific styles for A5 format */
+@media print {
+  @page {
+    margin: 4px;
+    size: A5;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: white !important;
+    font-size: 12px;
+  }
+  
+  .card-hero {
+    display: block !important;
+    padding: 0 !important;
+    transform: none;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .invitation-card {
+    width: 148mm !important; /* A5 width */
+    height: 210mm !important; /* A5 height */
+    max-width: none !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+    transform: none;
+    padding: 12px !important;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+  
+  .balloon-arch,
+  .corner-flowers,
+  .corner-cakes {
+    display: block !important;
+  }
+  
+  .btn {
+    display: none !important;
+  }
+  
+  /* Scale down text and elements for A5 fit */
+  .script-name {
+    font-size: 2.2rem !important;
+  }
+  
+  .birthday-line {
+    font-size: 1.6rem !important;
+  }
+  
+  .invite-text {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  .photo {
+    width: 220px !important;
+    height: 220px !important;
+    border-radius: 50% !important;
+    border: 2px solid #d11972 !important;
+  }
+  
+  /* Remove photo ring background and shadow for print */
+  .photo-ring {
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: 220px !important;
+    height: 220px !important;
+    border-radius: 50% !important;
+  }
+  
+  .date-time {
+    font-size: 0.85rem !important;
+  }
+  
+  .address {
+    font-size: 0.8rem !important;
+  }
+  
+  /* Adjust balloon arch for print */
+  .balloon-arch {
+    height: 80px !important;
+  }
+  
+  .arch-balloon {
+    width: 40px !important;
+  }
+  
+  /* Optimize spacing for print layout */
+  .photo-wrap {
+    margin-top: 0px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .card-copy {
+    padding: 4px 8px 0 !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .date-time {
+    margin: 8px auto 0 !important;
+  }
+  
+  .address {
+    margin: 8px auto 0 !important;
+  }
+  
+  /* Adjust corner flowers position */
+  .corner-flowers {
+    height: 35px !important;
+  }
+  
+  .flower {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  
+  .flower-left {
+    left: 6px !important;
+    bottom: 2px !important;
+  }
+  
+  .flower-right {
+    right: 6px !important;
+    bottom: 2px !important;
+  }
+  
+  /* Adjust corner cakes */
+  .cake {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  /* Ensure colors print correctly */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Hide elements that shouldn't print */
+  .hero-actions,
+  .section-cta,
+  .section-details,
+  .section-schedule,
+  .section-rsvp,
+  .section-more,
+  .footer {
+    display: none !important;
+  }
+}

@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
 
-    <!-- <link rel="stylesheet" href="css/animations.css" /> -->
+    <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="images/sun.svg" />
   </head>
@@ -28,6 +28,12 @@
     <section class="card-hero" aria-label="Birthday invitation card">
       <div class="container">
         <div class="invitation-card">
+          <!-- Birthday cake icons in top corners -->
+          <div class="corner-cakes" aria-hidden="true">
+            <img src="images/birthday-cake-svgrepo-com.svg" alt="" class="cake cake-left" />
+            <img src="images/birthday-cake-svgrepo-com.svg" alt="" class="cake cake-right" />
+          </div>
+          
           <div class="balloon-arch" aria-hidden="true">
             <img src="images/balloon.svg" alt="" class="arch-balloon a1" />
             <img src="images/balloon.svg" alt="" class="arch-balloon a2" />
@@ -97,7 +103,7 @@
           rel="noopener"
           class="btn btn-secondary"
         >Add to Google Calendar</a>
-    
+        <a id="print-btn" class="btn btn-primary">Print Card</a>
       </div>
     </section>
 
