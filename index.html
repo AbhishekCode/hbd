@@ -44,7 +44,9 @@
 
           <div class="photo-wrap">
             <div class="photo-ring">
-              <img src="images/pranshi.png" alt="Birthday girl" class="photo" />
+              <div class="photo-mask">
+                <img src="images/pranshi.png" alt="Birthday girl" class="photo" />
+              </div>
             </div>
             <svg class="arc-title" viewBox="0 0 300 150" aria-hidden="true">
               <defs>
@@ -72,6 +74,21 @@
             <p><strong>Enrise by Sayaji</strong></p>
             <p>Marunji Rd, Bhumkar Nagar, Wakad</p>
           </div>
+          <div class="border-flowers" aria-hidden="true">
+            <img src="images/flower.svg" alt="" class="flower f1" />
+            <img src="images/flower.svg" alt="" class="flower f2" />
+            <img src="images/flower.svg" alt="" class="flower f3" />
+            <img src="images/flower.svg" alt="" class="flower f4" />
+            <img src="images/flower.svg" alt="" class="flower f4" />
+            <img src="images/flower.svg" alt="" class="flower f3" />
+            <img src="images/flower.svg" alt="" class="flower f2" />
+            <img src="images/flower.svg" alt="" class="flower f1" />
+          </div>
+        </div>
+
+        <!-- Print Controls -->
+        <div class="print-actions" role="region" aria-label="Print controls">
+          <button type="button" class="btn btn-primary btn-print" id="btnPrintCard">Download PDF</button>
         </div>
       </div>
     </section>
@@ -174,6 +191,7 @@
     <script src="js/main.js"></script>
     <script src="js/form.js"></script>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.9.3/dist/html2pdf.bundle.min.js" integrity="sha256-x3Q3wqJqgR8CqVvKz4uHfQm8t6HqkqJmYx5qv8m7l5A=" crossorigin="anonymous"></script>
   </html>
 
 
