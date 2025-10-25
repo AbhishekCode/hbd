@@ -448,11 +448,13 @@ p {
   .invitation-card {
     width: 100%;
     height: auto;
-    min-height: 210mm;
     padding: 0px;
     padding-bottom: 30px;
   }
-  .balloon-arch { height: 90px; }
+  .balloon-arch {
+     height: 90px; 
+     margin-top: 30px;
+   }
   .arch-balloon { width: 40px; }
 
   /* Hide some balloons to reduce crowding */
